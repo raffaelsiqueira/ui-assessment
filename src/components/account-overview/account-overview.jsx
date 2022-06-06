@@ -5,13 +5,13 @@ import {
 } from '../../styles/styles';
 import SupportContactComponent from '../support-contact-component/support-contact-component';
 import { constants } from '../../assets/constants';
-
+import SalesInfoComponent from '../sales-info-component/sales-info-component';
 import './account-overview.css';
 
 export function AccountOverview({ data }) {
   const {
     supportContact,
-    // salesOverview,
+    salesOverview,
   } = data;
 
   return (
@@ -25,7 +25,7 @@ export function AccountOverview({ data }) {
         </GridColumn>
       </GridRow>
       <GridRow>
-        SEGUNDA LINHA
+        <SalesInfoComponent data={salesOverview} />
       </GridRow>
     </PageBackground>
   );

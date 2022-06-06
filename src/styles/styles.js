@@ -39,3 +39,14 @@ export const Avatar = styled.div`
     width: 1.3rem;
     padding: 1.3rem;
 `;
+
+export const SalesInfoBox = styled.div`
+    box-shadow: 0rem 0.2rem 1rem rgba(0,0,0,0.2);
+    border-radius: 0.5rem;
+    flex: 1;
+    background-color: white;
+`;
+
+export const SalesIcon = styled.div`
+    font-size: 1.5rem;
+`;

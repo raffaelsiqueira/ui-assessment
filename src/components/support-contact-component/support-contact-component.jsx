@@ -6,8 +6,7 @@ import { GridRow, GridColumn, Text } from '../../styles/styles';
 import { constants } from '../../assets/constants';
 import SupportAvatar from '../support-avatar/support-avatar';
 
-// eslint-disable-next-line no-unused-vars
-function SupportContactComponent({ data }) {
+const SupportContactComponent = ({ data }) => {
   const supportContact = data;
 
   return (
@@ -53,7 +52,7 @@ function SupportContactComponent({ data }) {
       </GridRow>
     </>
   );
-}
+};
 
 SupportContactComponent.propTypes = {
   data: shape({
