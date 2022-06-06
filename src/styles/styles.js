@@ -16,7 +16,8 @@ export const GridRow = styled.div`
 `;
 
 export const GridColumn = styled.div`
-    flex: ${(props) => props.size}
+    flex: ${(props) => props.size};
+    padding: ${(props) => (props.padding ? `${props.padding}` : '0')}; 
 `;
 
 export const PageTitle = styled.h1`
