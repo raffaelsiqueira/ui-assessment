@@ -7,14 +7,14 @@ import {
 } from '../../styles/styles';
 import { constants } from '../../assets/constants';
 
+export const calculatePercentage = (partial, total) => {
+  if (isNaN(partial) || isNaN(total)) return 'Inconclusive value';
+  if (partial === 0 || total === 0) return 0;
+  return (partial / total) * 100;
+};
+
 const SalesInfoComponent = ({ data }) => {
   const salesOverview = data;
-
-  const calculatePercentage = (partial, total) => {
-    if (isNaN(partial) || isNaN(total)) return 'Inconclusive value';
-    if (partial === 0 || total === 0) return 0;
-    return (partial / total) * 100;
-  };
 
   return (
     <SalesInfoBox>

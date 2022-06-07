@@ -6,7 +6,6 @@ import {
 import SupportContactComponent from '../support-contact-component/support-contact-component';
 import { constants } from '../../assets/constants';
 import SalesInfoComponent from '../sales-info-component/sales-info-component';
-import './account-overview.css';
 
 export function AccountOverview({ data }) {
   const {

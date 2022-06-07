@@ -27,6 +27,7 @@
         "import/no-named-as-default": 0,
         "react/function-component-definition": "off",
         "arrow-body-style": "off",
-        "no-restricted-globals": "off"
+        "no-restricted-globals": "off",
+        "no-undef": "off"
     }
 }

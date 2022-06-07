@@ -41,13 +41,15 @@ const SupportContactComponent = ({ data }) => {
             >
               {supportContact.email}
             </Text>
-            <Text
-              color="grey"
-              padding="0 10%"
-            >
-              {constants.telephoneNumber}
-            </Text>
+
           </GridRow>
+        </GridColumn>
+        <GridColumn size="1">
+          <Text
+            color="grey"
+          >
+            {constants.telephoneNumber}
+          </Text>
         </GridColumn>
       </GridRow>
     </GridColumn>
