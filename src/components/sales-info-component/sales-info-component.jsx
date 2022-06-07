@@ -10,9 +10,15 @@ import { constants } from '../../assets/constants';
 const SalesInfoComponent = ({ data }) => {
   const salesOverview = data;
 
+  const calculatePercentage = (partial, total) => {
+    if (isNaN(partial) || isNaN(total)) return 'Inconclusive value';
+    if (partial === 0 || total === 0) return 0;
+    return (partial / total) * 100;
+  };
+
   return (
     <SalesInfoBox>
-      <GridRow>
+      <GridRow borderBottom="#EAEAEA solid 0.1rem">
         <GridColumn size="1">
           <GridRow>
             <div aria-hidden="true">
@@ -37,7 +43,7 @@ const SalesInfoComponent = ({ data }) => {
                 color="grey"
                 bold
               >
-                {` ${salesOverview.uploads} uploads `}
+                {` ${salesOverview.uploads} ${constants.uploads} `}
               </Text>
               <Text
                 color="grey"
@@ -47,11 +53,10 @@ const SalesInfoComponent = ({ data }) => {
                   color="grey"
                   bold
                 >
-                  {` ${salesOverview.linesSaved} `}
+                  {` ${salesOverview.linesAttempted} `}
                 </Text>
                 <Text
                   color="grey"
-                  bold
                 >
                   {constants.linesAdded}
                 </Text>
@@ -67,8 +72,75 @@ const SalesInfoComponent = ({ data }) => {
           </div>
         </GridColumn>
       </GridRow>
-      <GridRow>
-        Segunda linha
+      <GridRow padding="0%">
+        <GridColumn size="1" borderRight="#EAEAEA solid 0.1rem" padding="1%">
+          { isNaN(calculatePercentage(salesOverview.successfulUploads, salesOverview.uploads))
+            ? (
+              <Text
+                bold
+                padding="0 1%"
+                size="2rem"
+                color="red"
+              >
+                {` ${calculatePercentage(salesOverview.successfulUploads, salesOverview.uploads)} ${constants.ofUploads} `}
+              </Text>
+            )
+            : (
+              <>
+                <Text
+                  bold
+                  flex
+                  padding="0 1%"
+                  size="3rem"
+                  color="green"
+                >
+                  {` ${calculatePercentage(salesOverview.successfulUploads, salesOverview.uploads)}% `}
+                </Text>
+                <Text
+                  color="grey"
+                  flex
+                  padding="0 1.3%"
+                  bold
+                >
+                  {constants.uploadSucess}
+                </Text>
+              </>
+            )}
+        </GridColumn>
+        <GridColumn size="1" padding="1%">
+          { isNaN(calculatePercentage(salesOverview.linesSaved, salesOverview.linesAttempted))
+            ? (
+              <Text
+                bold
+                padding="0 1%"
+                size="2rem"
+                color="red"
+              >
+                {` ${calculatePercentage(salesOverview.linesSaved, salesOverview.linesAttempted)} ${constants.ofUploads} `}
+              </Text>
+            )
+            : (
+              <>
+                <Text
+                  bold
+                  flex
+                  padding="0 1%"
+                  size="3rem"
+                  color="green"
+                >
+                  {` ${calculatePercentage(salesOverview.linesSaved, salesOverview.linesAttempted)}% `}
+                </Text>
+                <Text
+                  color="grey"
+                  flex
+                  padding="0 1.3%"
+                  bold
+                >
+                  {constants.linesSaved}
+                </Text>
+              </>
+            )}
+        </GridColumn>
       </GridRow>
     </SalesInfoBox>
   );

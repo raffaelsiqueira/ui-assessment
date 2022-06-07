@@ -4,6 +4,10 @@ export const constants = {
   telephoneNumber: '020 3362 4208',
   sales: 'Sales',
   youHad: 'You had',
+  uploads: 'uploads',
   and: 'and',
   linesAdded: 'lines added',
+  ofUploads: 'of uploads',
+  uploadSucess: 'UPLOAD SUCESS',
+  linesSaved: 'LINES SAVED',
 };

@@ -13,18 +13,22 @@ export const PageBackground = styled.div`
 export const GridRow = styled.div`
     display: flex;
     padding: ${(props) => (props.padding ? `${props.padding}` : '1%')};
+    border-bottom: ${(props) => (props.borderBottom ? `${props.borderBottom}` : '0')}
 `;
 
 export const GridColumn = styled.div`
     flex: ${(props) => props.size};
-    padding: ${(props) => (props.padding ? `${props.padding}` : '0')}; 
+    padding: ${(props) => (props.padding ? `${props.padding}` : '0')};
+    border-right: ${(props) => (props.borderRight ? `${props.borderRight}` : '0')}
 `;
 
 export const PageTitle = styled.h1`
     color: black;
+    display: flex;
 `;
 
 export const Text = styled.span`
+    display: ${(props) => (props.flex ? 'flex' : '')};
     color: ${(props) => (props.color ? `${props.color}` : 'black')};
     font-weight: ${(props) => (props.bold ? 'bold' : 'normal')};
     font-size: ${(props) => (props.size ? `${props.size}` : '1rem')};

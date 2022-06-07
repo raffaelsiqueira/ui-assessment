@@ -10,7 +10,7 @@ const SupportContactComponent = ({ data }) => {
   const supportContact = data;
 
   return (
-    <>
+    <GridColumn>
       <GridRow>
         <Text
           color="grey"
@@ -50,7 +50,7 @@ const SupportContactComponent = ({ data }) => {
           </GridRow>
         </GridColumn>
       </GridRow>
-    </>
+    </GridColumn>
   );
 };
 
