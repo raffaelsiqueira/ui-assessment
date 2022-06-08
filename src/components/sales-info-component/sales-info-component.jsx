@@ -116,7 +116,7 @@ const SalesInfoComponent = ({ data }) => {
                 size="2rem"
                 color="red"
               >
-                {` ${calculatePercentage(salesOverview.linesSaved, salesOverview.linesAttempted)} ${constants.ofUploads} `}
+                {` ${calculatePercentage(salesOverview.linesSaved, salesOverview.linesAttempted)} ${constants.ofLines} `}
               </Text>
             )
             : (

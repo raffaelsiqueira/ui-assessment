@@ -13,9 +13,9 @@ export const mockData = {
     linesSavedPercentage: 20,
   },
   salesOverviewErrorMock: {
-    uploads: 8,
+    uploads: NaN,
     successfulUploads: 4,
-    linesAttempted: 21,
+    linesAttempted: NaN,
     linesSaved: 4,
     lastUploadDate: 1605001226079,
     successfulUploadsPercentage: 37.5,
@@ -23,4 +23,5 @@ export const mockData = {
   },
   supportContactTitle: 'YOUR FEEFO SUPPORT CONTACT',
   telephoneNumber: '020 3362 4208',
+  inconclusiveValue: 'Inconclusive value',
 };

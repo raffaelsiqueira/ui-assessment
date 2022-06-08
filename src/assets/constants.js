@@ -8,6 +8,7 @@ export const constants = {
   and: 'and',
   linesAdded: 'lines added',
   ofUploads: 'of uploads',
+  ofLines: 'of lines',
   uploadSucess: 'UPLOAD SUCESS',
   linesSaved: 'LINES SAVED',
 };
